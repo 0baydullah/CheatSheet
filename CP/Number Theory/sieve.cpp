@@ -1,28 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int N = 1e5+7;
-int prime[N];
+#define N (int)1e6+7
+long long primes[N], cnt, isPrime[N];
 
-void sieve(int n){
-    for(int i=2; i<=n; i++){
-        if(prime[i]==0){
-            for(int j=i*i ; j<=n ; j+=i){
-                prime[j]=1;
-            }
-        }
-    }
+void sieve()
+{
+    for (long long i=3; i<N; i+=2)
+        if(!isPrime[i])
+            for (long long j=i*i; j<N; j+=i+i)
+                isPrime[j]=1;
 
-    if(n>=2){
-        cout << 2 << endl;
-    }
-    for(int i=3 ; i<=n ; i+=2){
-        if(prime[i]==0){
-            cout << i << " ";
-        }
-    } cout << endl;
+    primes[cnt++]=2;
+    for (long long i=3; i<N; i+=2)
+        if(!isPrime[i]) primes[cnt++]=i;
 }
 
-int main(){
-    int n ; cin >> n;
-    sieve(n);
+int main()
+{
+    sieve();
+    int n; cin >> n;
+    for(int i=0 ; i<n ; i++)
+        cout << primes[i] << " ";
+    return 0;
 }
+
+
