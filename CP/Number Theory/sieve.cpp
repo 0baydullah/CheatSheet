@@ -4,7 +4,7 @@ const int N = 1e5+7;
 int prime[N];
 
 void sieve(int n){
-    for(int i=2; i*i<=n; i++){
+    for(int i=2; i<=n; i++){
         if(prime[i]==0){
             for(int j=i*i ; j<=n ; j+=i){
                 prime[j]=1;
