@@ -1,27 +1,39 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
-#define N (int)1e6+7
-long long primes[N], cnt, isPrime[N];
 
-void sieve()
-{
-    for (long long i=3; i<N; i+=2)
-        if(!isPrime[i])
-            for (long long j=i*i; j<N; j+=i+i)
-                isPrime[j]=1;
 
-    primes[cnt++]=2;
-    for (long long i=3; i<N; i+=2)
-        if(!isPrime[i]) primes[cnt++]=i;
+#define SZ 1000007
+int MARK[SZ+1];
+vector<int>PRIME;
+
+void sieve(){
+    MARK[0]=MARK[1]=1;
+    int root = sqrt(SZ);
+
+    for(int i=4 ; i<SZ ; i+=2) MARK[i]=1;
+    for(int i=3 ; i<=root ; i+=2){
+        if(!MARK[i]){
+            for(int j=i*i ; j<=SZ ; j+=i*2){
+                MARK[j]=1;
+            }
+        }
+    }
+    
+    PRIME.push_back(2);
+    for(int i=3 ; i<=SZ ; i+=2)
+        if(!MARK[i])
+            PRIME.push_back(i);
+
+    return;
 }
 
 int main()
 {
+    ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
+
     sieve();
-    int n; cin >> n;
-    for(int i=0 ; i<n ; i++)
-        cout << primes[i] << " ";
+    for(auto x:PRIME)
+        cout << x << " " ;
+
     return 0;
 }
-
-
