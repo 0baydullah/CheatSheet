@@ -6,7 +6,8 @@ cin >> n;
   else {
     cout << "NO\n"; // the number is not power of 2
   }
-**//note:
-    if any number is 2's power then it don't have
-      any odd divisor !!
 /**
+    note:
+      if any number is 2's power then it don't have
+        any odd divisor !!
+**/
