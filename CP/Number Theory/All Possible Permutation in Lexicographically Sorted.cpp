@@ -1,5 +1,5 @@
 void AllPossiblePermutation()
-{
+{ 
     string s; cin >> s;
     sort(s.begin(),s.end());
     vector<string>v;
