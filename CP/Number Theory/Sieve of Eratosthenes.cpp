@@ -35,5 +35,5 @@ int main()
     for(auto x:PRIME)
         cout << x << " " ;
 
-    return 0;
+    return 0; 
 }
