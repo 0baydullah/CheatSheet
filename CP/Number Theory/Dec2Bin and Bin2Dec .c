@@ -13,3 +13,6 @@ int bin_to_dec(string s) {
         ret = (2*ret) + s[i] - '0';
     return ret;
 }
+
+/// this builtin function can be usable for converting binary to decimal
+    stoi("1000101010" , 0 , 2) ; // parm (binary string, 0 , 2);
