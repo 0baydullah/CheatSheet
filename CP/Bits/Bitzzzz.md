@@ -10,3 +10,11 @@
  - #define setbit1(n, i) ((n) | (1LL << (i))) 
  - #define togglebit(n, i) ((n) ^ (1LL << (i))) 
  - #define lastone(n) ((n) & (-(n))) 
+
+
+  -#define _SetBit(A, k) (A[(k / 32)] |= (1 << (k % 32)))
+  -#define _ClearBit(A, k) (A[(k / 32)] &= ~(1 << (k % 32)))
+  -#define _CheckBit(A, k) (A[(k / 32)] & (1 << (k % 32)))
+  -#define SetBit(x, k) (x |= (1 << k))
+  -#define ClearBit(x, k) (x &= ~(1 << k))
+  -#define CheckBit(x, k) (x & (1 << k))
