@@ -16,3 +16,6 @@
  - #define SetBit(x, k) (x |= (1 << k))
  - #define ClearBit(x, k) (x &= ~(1 << k))
  - #define CheckBit(x, k) (x & (1 << k))
+ - #define Set(N,p) ((N)|((1LL)<<(p)))
+ - #define Reset(N,p) ((N)&(~((1LL)<<(p))))
+ - #define Check(N,p) (!(((N)&((1LL)<<(p)))==(0)))
