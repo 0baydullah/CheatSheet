@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/FLUTTER" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/FLUTTER/list_data_api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/FLUTTER/muli_data_api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/FLUTTER/single_data_api" vcs="Git" />
+  </component>
+</project>
