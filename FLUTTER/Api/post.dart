@@ -51,6 +51,7 @@ class LogInRepository {
       body: body,
       headers: {
         "Content-Type": "application/json",
+        "Authorization": bToken.$,
       },
     );
     AppHelper().hideLoader();
