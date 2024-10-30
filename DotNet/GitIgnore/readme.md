@@ -1,3 +1,6 @@
+# dotnet-gitignore
+
+```bash
 # Compiled output
 bin/
 obj/
@@ -36,3 +39,4 @@ Dockerfile.*
 *.db
 *.sqlite
 *.sqlite3
+```
