@@ -1,6 +1,6 @@
 # Middlewares
 
-```Bash
+```cs
 
     var builder = WebApplication.CreateBuilder(args);
     var app = builder.Build();
@@ -32,4 +32,4 @@
 
 
 ### Links
-    - [Middleware] (https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0)
+    - [Middleware](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-8.0)
