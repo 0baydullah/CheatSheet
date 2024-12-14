@@ -14,13 +14,26 @@
 ```
 
 ```cs
-    @* Drop Down List With Enum  *@
+    @* Drop Down List With Enum Html Helper  *@
     <div>
         <label class="form-label">Select Gender : </label>
         @Html.DropDownList("Gender",
                 Html.GetEnumSelectList<Gender>(), "Select Gender",
                 new { @class = "form-control" })
     </div>
+
+ ```
+
+
+```cs
+    @* Drop Down List With Enum Tag Helper *@
+	<div class="form-group">
+		<label asp-for="Major" class="control-label"></label>
+		<select asp-for="Major" class="form-control" asp-items="Html.GetEnumSelectList<Major>()">
+			<option value="" selected disabled>Select Major</option>Major
+		</select>
+		<span asp-validation-for="Major" class="text-danger"></span>
+	</div>
 
  ```
 
