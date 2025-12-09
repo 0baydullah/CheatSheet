@@ -1,0 +1,41 @@
+
+
+@* Priority *@
+<div class="col-sm-3">
+    <label>Priority</label>
+    <div id="lead_priority" class="star-rating d-flex gap-1 align-items-center justify-content-start">
+        <i class="mdi mdi-star-outline star" style="font-size:1.25rem;" data-value="1"></i>
+        <i class="mdi mdi-star-outline star" style="font-size:1.25rem;" data-value="2"></i>
+        <i class="mdi mdi-star-outline star" style="font-size:1.25rem;" data-value="3"></i>
+        <i class="mdi mdi-star-outline star" style="font-size:1.25rem;" data-value="4"></i>
+        <i class="mdi mdi-star-outline star" style="font-size:1.25rem;" data-value="5"></i>
+    </div>
+    <input type="hidden" id="lead_priority_value" name="lead_priority" value="0">
+</div>
+
+<script>
+    // Priority star
+    $(document).on("click", ".star-rating .star", function () {
+        const value = $(this).data("value");
+        const current = parseInt($("#lead_priority_value").val());
+
+        let newValue = value;
+
+        // If clicked star is already selected, reset to 0
+        if (current === value) {
+            newValue = 0;
+        }
+
+        $("#lead_priority_value").val(newValue);
+
+        $(".star-rating .star").each(function () {
+            const starValue = $(this).data("value");
+
+            $(this).toggleClass("mdi-star", starValue <= newValue);
+            $(this).toggleClass("mdi-star-outline", starValue > newValue);
+
+            // Inline color change
+            $(this).css("color", starValue <= newValue ? "#f39c12" : "#ccc");
+        });
+    });
+</script>

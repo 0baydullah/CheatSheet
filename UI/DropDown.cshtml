@@ -1,0 +1,12 @@
+<!-- users -->
+<div class="col-md-3 col-sm-6 col-12 select2-sm">
+    <label class="small fw-bold">Nursing By</label>
+    <select id="NursingByFilter" data-toggle="select2" class="form-select form-select-sm"
+            >
+        <option value="">-- All Users --</option>
+        @foreach (var usr in Model.Users)
+        {
+            <option value="@usr.user_id">@usr.full_name</option>
+        }
+    </select>
+</div>
